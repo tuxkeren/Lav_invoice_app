@@ -43,11 +43,17 @@
                                         <td align="right">Rp {{ number_format($row->total_price) }}</td>
                                         <td>
                                             <form action="{{ route('invoice.destroy', $row->id) }}" method="POST">
-                                                @csrf
-                                                <input type="hidden" name="_method" value="DELETE">
-                                                <a href="{{ route('invoice.edit', $row->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                                                <button class="btn btn-danger btn-sm">Delete</button>
-                                            </form>
+											    @csrf
+											    <input type="hidden" name="_method" value="DELETE">
+											    
+											    <!-- TAMBAHKAN BARIS CODE INI -->
+											    <a href="{{ route('invoice.print', $row->id) }}" class="btn btn-secondary btn-sm">Print</a>
+											    <!-- TAMBAHKAN BARIS CODE INI -->
+											    
+											    <a href="{{ route('invoice.edit', $row->id) }}" class="btn btn-warning btn-sm">Edit</a>
+											    <button class="btn btn-danger btn-sm">Delete</button>
+											</form>
+
                                         </td>
                                     </tr>
                                 @empty
