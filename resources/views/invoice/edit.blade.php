@@ -15,7 +15,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="text-center">
-                                    <img src="{{ asset('laravel.png') }}" alt="" width="350px" height="150px">
+                                    <!-- <img src="{{ asset('laravel.png') }}" alt="" width="350px" height="150px"> -->
                                 </div>
                             </div>
                             <div class="col-md-6">
