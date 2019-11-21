@@ -118,7 +118,7 @@ class InvoiceController extends Controller
         $invoice = Invoice::with(['customer', 'detail', 'detail.product'])->find($id);
         //LOAD PDF YANG MERUJUK KE VIEW PRINT.BLADE.PHP DENGAN MENGIRIMKAN DATA DARI INVOICE
         //KEMUDIAN MENGGUNAKAN PENGATURAN LANDSCAPE A4
-        $pdf = PDF::loadView('invoice.print', compact('invoice'))->setPaper('a4', 'landscape');
+        $pdf = PDF::loadView('invoice.print', compact('invoice'))->setPaper('a4', 'potrait');
         return $pdf->stream();
     }
 

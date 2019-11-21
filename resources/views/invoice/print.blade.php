@@ -11,31 +11,31 @@
             font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             color:#333;
             text-align:left;
-            font-size:18px;
+            font-size:12px;
             margin:0;
         }
         .container{
             margin:0 auto;
-            margin-top:35px;
-            padding:40px;
-            width:750px;
+            margin-top:15px;
+            padding:1px;
+            width:650px;
             height:auto;
             background-color:#fff;
         }
         caption{
-            font-size:28px;
+            font-size:18px;
             margin-bottom:15px;
         }
         table{
             border:1px solid #333;
             border-collapse:collapse;
             margin:0 auto;
-            width:740px;
+            width:650px;
         }
         td, tr, th{
-            padding:12px;
+            padding:5px;
             border:1px solid #333;
-            width:185px;
+            width:50px;
         }
         th{
             background-color: #f0f0f0;
@@ -49,12 +49,12 @@
     <div class="container">
         <table>
             <caption>
-                Tux Invoice App
+                --: INVOICE :--
             </caption>
             <thead>
                 <tr>
-                    <th colspan="3">Invoice <strong>#{{ $invoice->id }}</strong></th>
-                    <th>{{ $invoice->created_at->format('D, d M Y') }}</th>
+                    <th colspan="2">Invoice No. <strong>#{{ $invoice->id }}</strong></th>
+                    <th colspan="2" align="right">{{ $invoice->created_at->format('D, d M Y') }}</th>
                 </tr>
                 <tr>
                     <td colspan="2">
@@ -91,20 +91,18 @@
                 </tr>
                 @endforeach
                 <tr>
-                    <th colspan="3">Subtotal</th>
-                    <td align="right">Rp {{ number_format($invoice->total) }}</td>
+                    <th colspan="3" align="right">Subtotal:</th>
+                    <td align="right"><strong>Rp {{ number_format($invoice->total) }}</strong></td>
                 </tr>
                 <tr>
-                    <th>Pajak</th>
-                    <td></td>
-                    <td>2%</td>
-                    <td align="right">Rp {{ number_format($invoice->tax) }}</td>
+                    <th colspan="3" align="right">Pajak 2%:</th>
+                    <td align="right"><strong>Rp {{ number_format($invoice->tax) }}</strong></td>
                 </tr>
             </tbody>
             <tfoot>
                 <tr>
-                    <th colspan="3">Total</th>
-                    <td align="right">Rp {{ number_format($invoice->total_price) }}</td>
+                    <th colspan="3" align="right">Total:</th>
+                    <td align="right"><strong>Rp {{ number_format($invoice->total_price) }}</strong></td>
                 </tr>
             </tfoot>
         </table>
