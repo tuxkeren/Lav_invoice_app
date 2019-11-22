@@ -9,4 +9,11 @@
 
 ## About Invoicing
 
-Invoicing is a web application that create with Laravel 6.x 
+Invoicing is a web application that create with Laravel 6.x.
+This aplication is for basic Laravel training purpose, to show to the students how to build complete CRUD application with Laravel.
+So they can imaging how to build another application that have CRUD function base on this case study.
+
+I used only Laravel version 6.x.x with some plugins to create authentication scaffolding and for PDF report.
+
+Please use this app for not commercial. 
+
